@@ -9,7 +9,7 @@ class Handlers:
         self.grabber_chat_id = grabber_chat_id
         self.forwarding_chat_id = forwarding_chat_id
 
-    @events.register(events.NewMessage())
+    @events.register(events.NewMessage(incoming=True))
     async def incoming(self, event):
         try:
             if (event.peer_id.channel_id == int(self.grabber_chat_id)):
