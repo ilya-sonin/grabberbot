@@ -29,6 +29,8 @@ class Grabber:
             handlers = Handlers(client=self.client, grabber_chat_id=self.grabber_chat_id,
                                 forwarding_chat_id=self.forwarding_chat_id)
             self.client.add_event_handler(handlers.incoming)
+            print("Bot starts...")
             self.client.run_until_disconnected()
         else:
+            print("BIG ERROR")
             sys.exit()
