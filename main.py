@@ -8,7 +8,7 @@ client = Client(username=config.username,
 
 
 def grabberStart():
-    grabber = Grabber(client, config.chat_id)
+    grabber = Grabber(client, config.grabber_chat_id, config.forwarding_chat_id)
     grabber.start()
 
 

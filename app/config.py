@@ -20,5 +20,9 @@ class Config:
         return self.config.get('Telegram', 'username')
 
     @property
-    def chat_id(self):
-        return self.config.get('Telegram', 'chat_id')
+    def grabber_chat_id(self):
+        return self.config.get('Telegram', 'grabber_chat_id')
+
+    @property
+    def forwarding_chat_id(self):
+        return self.config.get('Telegram', 'forwarding_chat_id')
